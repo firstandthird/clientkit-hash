@@ -1,0 +1,31 @@
+{
+  "name": "clientkit-hash",
+  "version": "1.0.0",
+  "description": "Clientkit task for renaming/hashing files",
+  "main": "hash.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firstandthird/clientkit-hash.git"
+  },
+  "author": "First+Third",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/firstandthird/clientkit-hash/issues"
+  },
+  "homepage": "https://github.com/firstandthird/clientkit-hash#readme",
+  "devDependencies": {
+    "eslint": "^3.9.1",
+    "eslint-config-firstandthird": "^3.0.2",
+    "eslint-plugin-import": "^2.1.0"
+  },
+  "dependencies": {
+    "glob": "^7.1.1",
+    "clientkit-task": "0.0.7",
+    "rev-hash": "1.0.0"
+  },
+  "eslintConfig": {
+    "extends": "firstandthird"
+  }
+}
