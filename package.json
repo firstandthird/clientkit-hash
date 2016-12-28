@@ -1,16 +1,9 @@
 {
   "name": "clientkit-hash",
   "version": "0.0.1",
-  "description": "Client kit for websites",
+  "description": "Clientkit task for renaming/hashing files",
   "main": "hash.js",
   "scripts": {
-    "start": "node app.js --config conf --env ck",
-    "dev": "concurrently 'npm run dev:ck' 'npm run serve'",
-    "dev:ck": "node app.js --config demo/clientkit",
-    "test": "mocha",
-    "serve": "serve -p 8082 dist",
-    "ghpages": "./tasks/ghpages",
-    "dockerhub": "./tasks/docker-push"
   },
   "repository": {
     "type": "git",
