@@ -1,6 +1,6 @@
 {
   "name": "clientkit-hash",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Clientkit task for renaming/hashing files",
   "main": "hash.js",
   "scripts": {
