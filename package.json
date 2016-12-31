@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "Clientkit task for renaming/hashing files",
   "main": "hash.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/firstandthird/clientkit-hash.git"
@@ -21,8 +20,9 @@
     "eslint-plugin-import": "^2.1.0"
   },
   "dependencies": {
-    "glob": "^7.1.1",
+    "async": "^2.1.4",
     "clientkit-task": "0.0.7",
+    "glob": "^7.1.1",
     "rev-hash": "1.0.0"
   },
   "eslintConfig": {
