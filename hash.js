@@ -28,14 +28,12 @@ class HashTask extends ClientKitTask {
   }
 
   process(input, filename, processDone) {
-    async.auto({
-      fileNames: (done) => {
-        // get the list of matching files
-        glob(input, {}, done);
-      },
-      fileContents: ['fileNames', (results, done) => {
+    async.autoInject({
+      // get the list of matching files
+      fileNames: (done) => glob(input, {}, done),
+      fileContents: (fileNames, done) => {
         const seriesResult = {};
-        async.eachSeries(results.fileNames, (fileName, eachDone) => {
+        async.eachSeries(fileNames, (fileName, eachDone) => {
           if (!fileName) {
             return eachDone();
           }
@@ -49,20 +47,20 @@ class HashTask extends ClientKitTask {
         }, (err) => {
           done(err, seriesResult);
         });
-      }],
-      fileHashes: ['fileContents', (results, done) => {
+      },
+      fileHashes: (fileContents, done) => {
         const hashResults = {};
-        Object.keys(results.fileContents).forEach((fileName) => {
-          const hashName = this.hasher(fileName, results.fileContents[fileName]);
+        Object.keys(fileContents).forEach((fileName) => {
+          const hashName = this.hasher(fileName, fileContents[fileName]);
           hashResults[fileName] = hashName;
         });
         done(null, hashResults);
-      }],
-      renameFiles: ['fileHashes', (results, done) => {
-        async.eachSeries(Object.keys(results.fileHashes), (fileName, eachDone) => {
-          fs.rename(fileName, results.fileHashes[fileName], eachDone);
+      },
+      renameFiles: (fileHashes, done) => {
+        async.eachSeries(Object.keys(fileHashes), (fileName, eachDone) => {
+          fs.rename(fileName, fileHashes[fileName], eachDone);
         }, done);
-      }]
+      }
     }, processDone);
   }
 
