@@ -1,6 +1,6 @@
 {
   "name": "runkit-hash",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "runkit task for renaming/hashing files",
   "main": "hash.js",
   "scripts": {},
