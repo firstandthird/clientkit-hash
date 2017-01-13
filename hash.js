@@ -1,16 +1,13 @@
 'use strict';
 const async = require('async');
-const ClientKitTask = require('clientkit-task');
+const RunKitTask = require('runkit-task');
 const glob = require('glob');
 const hash = require('rev-hash');
 const path = require('path');
 const fs = require('fs');
 
-class HashTask extends ClientKitTask {
-
-  constructor(name, config, runner) {
-    super(name, config, runner);
-    // map of original filename to its hashed equivalent, useful for url hashing:
+class HashTask extends RunKitTask {
+  init() {
     this.map = {};
   }
 

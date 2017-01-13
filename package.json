@@ -1,19 +1,19 @@
 {
-  "name": "clientkit-hash",
+  "name": "runkit-hash",
   "version": "0.0.2",
-  "description": "Clientkit task for renaming/hashing files",
+  "description": "runkit task for renaming/hashing files",
   "main": "hash.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/firstandthird/clientkit-hash.git"
+    "url": "git+https://github.com/firstandthird/runkit-hash.git"
   },
   "author": "First+Third",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/firstandthird/clientkit-hash/issues"
+    "url": "https://github.com/firstandthird/runkit-hash/issues"
   },
-  "homepage": "https://github.com/firstandthird/clientkit-hash#readme",
+  "homepage": "https://github.com/firstandthird/runkit-hash#readme",
   "devDependencies": {
     "eslint": "^3.9.1",
     "eslint-config-firstandthird": "^3.0.2",
@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "async": "^2.1.4",
-    "clientkit-task": "0.0.9",
+    "runkit-task": "0.0.10",
     "glob": "^7.1.1",
     "rev-hash": "1.0.0"
   },
