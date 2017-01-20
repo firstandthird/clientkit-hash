@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/firstandthird/runkit-hash#readme",
   "devDependencies": {
-    "eslint": "^3.9.1",
+    "eslint": "^3.14.0",
     "eslint-config-firstandthird": "^3.0.2",
     "eslint-plugin-import": "^2.1.0"
   },
