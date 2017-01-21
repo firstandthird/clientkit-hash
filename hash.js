@@ -1,12 +1,12 @@
 'use strict';
 const async = require('async');
-const RunKitTask = require('runkit-task');
+const TaskKitTask = require('taskkit-task');
 const glob = require('glob');
 const hash = require('rev-hash');
 const path = require('path');
 const fs = require('fs');
 
-class HashTask extends RunKitTask {
+class HashTask extends TaskKitTask {
   init() {
     this.map = {};
   }

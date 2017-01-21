@@ -1,22 +1,21 @@
 {
-  "name": "runkit-hash",
+  "name": "taskkit-hash",
   "version": "0.0.3",
-  "description": "runkit task for renaming/hashing files",
+  "description": "taskkit task for renaming/hashing files",
   "main": "hash.js",
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/firstandthird/runkit-hash.git"
-  },
   "scripts": {
     "test": "tape test/**.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firstandthird/taskkit-hash.git"
   },
   "author": "First+Third",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/firstandthird/runkit-hash/issues"
+    "url": "https://github.com/firstandthird/taskkit-hash/issues"
   },
-  "homepage": "https://github.com/firstandthird/runkit-hash#readme",
+  "homepage": "https://github.com/firstandthird/taskkit-hash#readme",
   "devDependencies": {
     "eslint": "^3.9.1",
     "eslint-config-firstandthird": "^3.0.2",
@@ -26,9 +25,9 @@
   },
   "dependencies": {
     "async": "^2.1.4",
-    "runkit-task": "0.0.10",
     "glob": "^7.1.1",
-    "rev-hash": "1.0.0"
+    "rev-hash": "1.0.0",
+    "taskkit-task": "0.0.11"
   },
   "eslintConfig": {
     "extends": "firstandthird"
