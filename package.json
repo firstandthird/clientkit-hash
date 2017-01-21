@@ -1,6 +1,6 @@
 {
   "name": "taskkit-hash",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "taskkit task for renaming/hashing files",
   "main": "hash.js",
   "scripts": {
