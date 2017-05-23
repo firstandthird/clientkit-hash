@@ -14,7 +14,10 @@ class HashTask extends TaskKitTask {
   get description() {
     return 'Hashes your file names (based on their content) and prints a route-map for the original file. Useful for updating browser caches when a file gets updated';
   }
-
+  // returns the module to load when running in a separate process:
+  get classModule() {
+    return path.join(__dirname, 'hash.js');
+  }
   // save the filename:hashname map to file:
   onFinish(results, done) {
     this.writeMap(done);
