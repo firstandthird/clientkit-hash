@@ -58,6 +58,9 @@ class HashTask extends TaskKitTask {
       },
       renameFiles: (fileHashes, done) => {
         async.eachSeries(Object.keys(fileHashes), (fileName, eachDone) => {
+          if (this.options.exclude && this.options.exclude.indexOf(fileName) !== -1) {
+            return eachDone();
+          }
           fs.rename(fileName, fileHashes[fileName], eachDone);
         }, done);
       }

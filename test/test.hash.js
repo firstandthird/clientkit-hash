@@ -56,3 +56,20 @@ tape('writes mapping file', (t) => {
     });
   });
 });
+
+tape('exclude files', (t) => {
+  fs.writeFile('test/scripts/input2.js', `
+  const x = 5;
+  console.log('there there');
+  `, () => {
+    const task = new HashTask('hash', {
+      exclude: ['test/scripts/input2.js']
+    }, {});
+    const input = 'test/scripts/*';
+    task.process(input, '', (err, map) => {
+      t.equal(err, null);
+      t.ok(fs.existsSync('test/scripts/input2.js'));
+      t.end();
+    });
+  });
+});
